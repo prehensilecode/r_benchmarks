@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 
 # Usage raw_harness.py Y/N repTimes sourceFile arguments
@@ -52,12 +52,12 @@ if __name__ == "__main__":
     
     use_system_time = argv[argc+1]
     if(use_system_time == 'TRUE'):
-        print '[rbench]Cannot use system.time() for these experiment R VMs. Fall back to meter=time.'
+        print('[rbench]Cannot use system.time() for these experiment R VMs. Fall back to meter=time.')
 
     rep = argv[argc+2]
-    print rep
+    print(rep)
     src = argv[argc+3] #the file
-    print src
+    print(src)
     #construct the file's full current full path
     src = os.path.join(os.getcwd(), src)
     #now generate the source file

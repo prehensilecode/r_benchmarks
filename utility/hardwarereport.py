@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import platform
 
@@ -17,8 +17,8 @@ def get_processors():
     return p_str
 
 def report_platform(rhome):
-    print '>> Platform'
+    print('>> Platform')
     #TODO: more detail platform descriptions
-    print 'Processor:', get_processors()
-    print 'OS:',platform.platform()
-    print 'R Platform:',rhome
+    print('Processor:', get_processors())
+    print('OS:',platform.platform())
+    print('R Platform:',rhome)

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 import sys,string
 
@@ -51,8 +51,8 @@ if __name__ == "__main__":
     #lines = [line.strip() for line in open('_perf.tmp')]
     lines = [line.strip() for line in sys.stdin.readlines()]
     metrics = process_perf_lines(lines)
-    print "==== Each Iteration Metrics ===="
-    keys = metrics.keys()
+    print("==== Each Iteration Metrics ====")
+    keys = list(metrics.keys())
     keys.sort()
     for key in keys:
-        print "%.2f,%s" % (metrics[key],key)
+        print("%.2f,%s" % (metrics[key],key))
